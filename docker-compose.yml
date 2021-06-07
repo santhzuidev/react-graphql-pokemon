@@ -1,0 +1,15 @@
+version : "3.3"
+services: 
+	pokemon:
+	  volumes:
+	     - /Users/santoshchegondi/Desktop/plusOneRobotics/react-graphql-pokemon: /root/pokemon
+	  build: 
+		context : .
+		dockerfile : Dockerfile 
+		args:
+			accesstoken : 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
+		ports:
+			- "3000:3000"
+		expose: 
+			- "3000"
+
